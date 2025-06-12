@@ -1,1 +1,58 @@
+name: Release
 
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          submodules: true
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+          
+      - name: Get current version
+        id: get_version
+        run: |
+          VERSION=$(node -e "console.log(require('./index.js')(msg => msg.default).version)")
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          
+      - name: Check version change
+        id: check_version
+        run: |
+          # Get the last commit that modified index.js
+          LAST_COMMIT=$(git log -p -1 -- index.js | grep -A 5 "version:" | grep -o "'[0-9]*\.[0-9]*\.[0-9]*'" | tr -d "'")
+          CURRENT_VERSION=${{ steps.get_version.outputs.version }}
+          
+          if [ "$LAST_COMMIT" != "$CURRENT_VERSION" ]; then
+            echo "Version changed from $LAST_COMMIT to $CURRENT_VERSION"
+            echo "should_release=true" >> $GITHUB_OUTPUT
+          else
+            echo "No version change detected"
+            echo "should_release=false" >> $GITHUB_OUTPUT
+          fi
+          
+      - name: Create release package
+        if: steps.check_version.outputs.should_release == 'true'
+        run: |
+          mkdir -p dist
+          zip -r dist/sengo1-${{ steps.get_version.outputs.version }}.zip . -x "*.git*" -x "*.md" -x "*.github*" -x "dist/*"
+          
+      - name: Create Release
+        if: steps.check_version.outputs.should_release == 'true'
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: v${{ steps.get_version.outputs.version }}
+          files: dist/sengo1-${{ steps.get_version.outputs.version }}.zip
+          generate_release_notes: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
