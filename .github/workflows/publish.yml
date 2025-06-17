@@ -41,18 +41,53 @@ jobs:
             echo "should_release=false" >> $GITHUB_OUTPUT
           fi
           
-      - name: Create release package
+      - name: Create OpenBlock release package
         if: steps.check_version.outputs.should_release == 'true'
         run: |
           mkdir -p dist
-          zip -r dist/sengo1-${{ steps.get_version.outputs.version }}.zip . -x "*.git*" -x "*.md" -x "*.github*" -x "dist/*"
+          zip -r dist/sengo1-openblock-${{ steps.get_version.outputs.version }}.zip . -x "*.git*" -x "*.md" -x "*.github*" -x "dist/*" -x "kidsblock/*"
+          
+      - name: Create KidsBlock files
+        if: steps.check_version.outputs.should_release == 'true'
+        run: |
+          mkdir -p kidsblock
+          cp -r lib kidsblock/
+          cp -r assets kidsblock/
+          
+          # 复制并转换文件
+          cp index.js kidsblock/
+          cp blocks.js kidsblock/
+          cp generator.js kidsblock/
+          cp toolbox.js kidsblock/
+          cp translations.js kidsblock/
+          
+          # 使用 sed 进行替换
+          sed -i 's/module.exports = Sengo1;/module.exports = sengo1;/g' kidsblock/index.js
+          sed -i 's/function registerBlocks(Blockly)/function addBlocks(Blockly)/g' kidsblock/blocks.js
+          sed -i 's/function registerGenerators(Blockly)/function addGenerator(Blockly)/g' kidsblock/generator.js
+          sed -i 's/function registerToolboxs()/function addToolbox()/g' kidsblock/toolbox.js
+          sed -i 's/function registerBlocksMessages(Blockly)/function addMsg(Blockly)/g' kidsblock/translations.js
+          
+          # 替换导出语句
+          sed -i 's/exports = registerBlocks;/exports = addBlocks;/g' kidsblock/blocks.js
+          sed -i 's/exports = registerGenerators;/exports = addGenerator;/g' kidsblock/generator.js
+          sed -i 's/exports = registerToolboxs;/exports = addToolbox;/g' kidsblock/toolbox.js
+          
+      - name: Create KidsBlock release package
+        if: steps.check_version.outputs.should_release == 'true'
+        run: |
+          cd kidsblock
+          zip -r ../dist/sengo1-kidsblock-${{ steps.get_version.outputs.version }}.zip . -x "*.git*"
+          cd ..
           
       - name: Create Release
         if: steps.check_version.outputs.should_release == 'true'
         uses: softprops/action-gh-release@v1
         with:
           tag_name: v${{ steps.get_version.outputs.version }}
-          files: dist/sengo1-${{ steps.get_version.outputs.version }}.zip
+          files: |
+            dist/sengo1-openblock-${{ steps.get_version.outputs.version }}.zip
+            dist/sengo1-kidsblock-${{ steps.get_version.outputs.version }}.zip
           generate_release_notes: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
