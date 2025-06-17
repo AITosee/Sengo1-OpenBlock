@@ -1,4 +1,4 @@
-function registerBlocks(Blockly) {
+function addBlocks(Blockly) {
     const set_color = '#EF5411';
     const set_secondaryColor = '#FF5309';
 
@@ -11,10 +11,8 @@ function registerBlocks(Blockly) {
     })?.getField("NO")?.getOptions() || []
     };
 
-    const board = Blockly.Device.getDeviceId();
     const serialPortOptions = getSerialPortOptions();
 
-    console.log(board);
     console.log(serialPortOptions);
 
     // 初始化传感器
@@ -584,4 +582,4 @@ function registerBlocks(Blockly) {
     return Blockly;
 }
 
-exports = registerBlocks; 
+exports = addBlocks; 

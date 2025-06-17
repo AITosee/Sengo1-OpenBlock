@@ -1,4 +1,4 @@
-function registerToolboxs() {
+function addToolbox() {
     return `
 <category name="%{BKY_SENGO1_CATEGORY}" id="SENGO1_CATEGORY" colour="#EF5411" secondaryColour="#FF5309">
     <label text="%{BKY_SENGO1_SETUP}"></label>
@@ -83,4 +83,4 @@ function registerToolboxs() {
 </category>`;
 }
 
-exports = registerToolboxs; 
+exports = addToolbox; 

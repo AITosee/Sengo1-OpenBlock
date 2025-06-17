@@ -1,4 +1,4 @@
-function registerGenerators(Blockly) {
+function addGenerator(Blockly) {
     Blockly.Arduino.sengo1_begin = function() {
         const dropdown_mode_obj = this.getFieldValue('mode_obj');
         const dropdown_addr_obj = this.getFieldValue('addr_obj');
@@ -198,4 +198,4 @@ function registerGenerators(Blockly) {
     return Blockly;
 }
 
-exports = registerGenerators; 
+exports = addGenerator; 
