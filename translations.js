@@ -18,7 +18,7 @@ function getInterfaceTranslations() {
 function registerBlocksMessages(Blockly) {
     // 英文翻译
     Object.assign(Blockly.ScratchMsgs.locales["en"], {
-        "SENGO1_CATEGORY": "Sengo1 Vision",
+        "SENGO1_CATEGORY": "Sengo1 Vision Sensor",
         "SENGO1_SETUP": "Setup Module",
         "SENGO1_RUN": "Run Module",
         "SENGO1_NAME": "  Sengo1  ",
@@ -115,7 +115,7 @@ function registerBlocksMessages(Blockly) {
 
     // 中文简体翻译
     Object.assign(Blockly.ScratchMsgs.locales["zh-cn"], {
-        "SENGO1_CATEGORY": "Sengo1 视觉",
+        "SENGO1_CATEGORY": "Sengo1视觉传感器",
         "SENGO1_SETUP": "设置模块",
         "SENGO1_RUN": "运行模块",
         "SENGO1_NAME": "  Sengo1  ",
@@ -212,7 +212,7 @@ function registerBlocksMessages(Blockly) {
 
     // 中文繁体翻译
     Object.assign(Blockly.ScratchMsgs.locales["zh-tw"], {
-        "SENGO1_CATEGORY": "Sengo1 視覺",
+        "SENGO1_CATEGORY": "Sengo1視覺傳感器",
         "SENGO1_SETUP": "設置模塊",
         "SENGO1_RUN": "運行模塊",
         "SENGO1_NAME": "  Sengo1  ",
