@@ -1,4 +1,4 @@
-const sengo1 = formatMessage => ({
+const Sengo1 = formatMessage => ({
     name: formatMessage({
         id: 'Sengo1.name',
         default: 'Sengo1',
@@ -21,7 +21,6 @@ const sengo1 = formatMessage => ({
     blocks: 'blocks.js',
     generator: 'generator.js',
     toolbox: 'toolbox.js',
-    msg: 'translations.js',
     translations: 'translations.js',
     library: 'lib',
     tags: ['sensor', 'AI'],
