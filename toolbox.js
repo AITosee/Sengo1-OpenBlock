@@ -10,7 +10,7 @@ function registerToolboxs() {
         <field name="led_color_obj1">kLedBlue</field>
         <field name="led_color_obj2">kLedRed</field>
         <value name="level">
-            <shadow type="math_number">
+            <shadow type="math_whole_number">
                 <field name="NUM">1</field>
             </shadow>
         </value>
@@ -18,41 +18,41 @@ function registerToolboxs() {
     <block type="sengo1_vision_set_status" id="sengo1_vision_set_status"></block>
     <block type="sengo1_vision_set_param_num" id="sengo1_vision_set_param_num">
         <value name="num">
-            <shadow type="math_number">
+            <shadow type="math_whole_number">
                 <field name="NUM">1</field>
             </shadow>
         </value>
     </block>
     <block type="sengo1_vision_color_set_param" id="sengo1_vision_color_set_param">
         <value name="x">
-            <shadow type="math_number">
+            <shadow type="math_whole_number">
                 <field name="NUM">50</field>
             </shadow>
         </value>
         <value name="y">
-            <shadow type="math_number">
+            <shadow type="math_whole_number">
                 <field name="NUM">50</field>
             </shadow>
         </value>
         <value name="w">
-            <shadow type="math_number">
+            <shadow type="math_whole_number">
                 <field name="NUM">3</field>
             </shadow>
         </value>
         <value name="h">
-            <shadow type="math_number">
+            <shadow type="math_whole_number">
                 <field name="NUM">4</field>
             </shadow>
         </value>
     </block>
     <block type="sengo1_vision_blob_set_param" id="sengo1_vision_blob_set_param">
         <value name="w">
-            <shadow type="math_number">
+            <shadow type="math_whole_number">
                 <field name="NUM">3</field>
             </shadow>
         </value>
         <value name="h">
-            <shadow type="math_number">
+            <shadow type="math_whole_number">
                 <field name="NUM">4</field>
             </shadow>
         </value>
@@ -61,7 +61,7 @@ function registerToolboxs() {
     <block type="sengo1_vision_face_set_param" id="sengo1_vision_face_set_param">
         <field name="lable">100</field>
         <value name="index">
-            <shadow type="math_number">
+            <shadow type="math_whole_number">
                 <field name="NUM">1</field>
             </shadow>
         </value>

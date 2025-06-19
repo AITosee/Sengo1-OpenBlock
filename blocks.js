@@ -122,8 +122,7 @@ function registerBlocks(Blockly) {
                     },
                     {
                         type: 'input_value',
-                        name: 'num',
-                        check: 'Number'
+                        name: 'num'
                     }
                 ],
                 colour: set_color,
@@ -141,13 +140,11 @@ function registerBlocks(Blockly) {
                 args0: [
                     {
                         type: 'input_value',
-                        name: 'w',
-                        check: 'Number'
+                        name: 'w'
                     },
                     {
                         type: 'input_value',
-                        name: 'h',
-                        check: 'Number'
+                        name: 'h'
                     },
                     {
                         type: 'field_dropdown',
@@ -181,23 +178,19 @@ function registerBlocks(Blockly) {
                 args0: [
                     {
                         type: 'input_value',
-                        name: 'x',
-                        check: 'Number'
+                        name: 'x'
                     },
                     {
                         type: 'input_value',
-                        name: 'y',
-                        check: 'Number'
+                        name: 'y'
                     },
                     {
                         type: 'input_value',
-                        name: 'w',
-                        check: 'Number'
+                        name: 'w'
                     },
                     {
                         type: 'input_value',
-                        name: 'h',
-                        check: 'Number'
+                        name: 'h'
                     }
                 ],
                 colour: set_color,
@@ -223,8 +216,7 @@ function registerBlocks(Blockly) {
                     },
                     {
                         type: 'input_value',
-                        name: 'index',
-                        check: 'Number'
+                        name: 'index'
                     }
                 ],
                 colour: set_color,
@@ -274,8 +266,7 @@ function registerBlocks(Blockly) {
                     },
                     {
                         type: 'input_value',
-                        name: 'level',
-                        check: 'Number'
+                        name: 'level'
                     }
                 ],
                 colour: set_color,
