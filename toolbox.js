@@ -16,13 +16,6 @@ function registerToolboxs() {
         </value>
     </block>
     <block type="sengo1_vision_set_status" id="sengo1_vision_set_status"></block>
-    <block type="sengo1_vision_set_param_num" id="sengo1_vision_set_param_num">
-        <value name="num">
-            <shadow type="math_whole_number">
-                <field name="NUM">1</field>
-            </shadow>
-        </value>
-    </block>
     <block type="sengo1_vision_color_set_param" id="sengo1_vision_color_set_param">
         <value name="x">
             <shadow type="math_whole_number">

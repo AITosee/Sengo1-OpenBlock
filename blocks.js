@@ -40,10 +40,7 @@ function registerBlocks(Blockly) {
                         type: 'field_dropdown',
                         name: 'addr_obj',
                         options: [
-                            ['0x60', '0x60'],
-                            ['0x61', '0x61'],
-                            ['0x62', '0x62'],
-                            ['0x63', '0x63']
+                            ['0x60', '0x60']
                         ]
                     }
                 ],
