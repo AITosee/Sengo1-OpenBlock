@@ -1,16 +1,16 @@
 function getInterfaceTranslations() {
     return {
         "en": {
-            "sengo1.name": "Sengo1 Vision Sensor",
-            "sengo1.description": "Entry-level AI vision module, supports QR code and face recognition, with block shell"
+            "Sengo1.name": "Sengo1 Vision Sensor",
+            "Sengo1.description": "Entry-level AI vision module, supports QR code and face recognition, with block shell"
         },
         "zh-cn": {
-            "sengo1.name": "Sengo1 视觉传感器",
-            "sengo1.description": "入门级AI视觉模块，支持二维码与人脸识别，积木外壳"
+            "Sengo1.name": "Sengo1 视觉传感器",
+            "Sengo1.description": "入门级AI视觉模块，支持二维码与人脸识别，积木外壳"
         },
         "zh-tw": {
-            "sengo1.name": "Sengo1 視覺傳感器",
-            "sengo1.description": "入門級AI視覺模塊，支持二維碼與人臉識別，積木外殼"
+            "Sengo1.name": "Sengo1 視覺傳感器",
+            "Sengo1.description": "入門級AI視覺模塊，支持二維碼與人臉識別，積木外殼"
         }
     };
 }
