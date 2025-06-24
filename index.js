@@ -4,7 +4,7 @@ const Sengo1 = formatMessage => ({
         default: 'Sengo1'
     }),
     extensionId: 'Sengo1',
-    version: '0.1.2',
+    version: '0.1.3',
     supportDevice: ['arduinoUno','arduinoUnoR4Wifi','arduinoUnoR4Minima', 'arduinoNano', 'arduinoLeonardo', 'arduinoMega2560', 
         'arduinoEsp32', 'arduinoEsp8266','arduinoEsp32S3',
         'arduinoK210','arduinoK210MaixDock','arduinoK210Maixduino','arduinoLeonardo',

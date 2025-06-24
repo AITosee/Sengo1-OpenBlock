@@ -49,7 +49,7 @@ function registerToolboxs() {
                 <field name="NUM">4</field>
             </shadow>
         </value>
-        <field name="lable">kColorRed</field>
+        <field name="lable">Sengo1::kColorRed</field>
     </block>
     <block type="sengo1_vision_face_set_param" id="sengo1_vision_face_set_param">
         <field name="lable">100</field>
