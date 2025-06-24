@@ -45,7 +45,7 @@ jobs:
         if: steps.check_version.outputs.should_release == 'true'
         run: |
           mkdir -p dist
-          zip -r dist/sengo1-openblock-${{ steps.get_version.outputs.version }}.zip . -x "*.git*" -x "*.md" -x "*.github*" -x "dist/*" -x "kidsblock/*"
+          zip -r dist/sengo1-openblock-${{ steps.get_version.outputs.version }}.zip . -x "*.git*" -x "*.md" -x "*.ob" -x "*.github*" -x "dist/*" -x "kidsblock/*"
           
       - name: Create KidsBlock files
         if: steps.check_version.outputs.should_release == 'true'
