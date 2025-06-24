@@ -148,14 +148,12 @@ function registerBlocks(Blockly) {
                         name: 'lable',
                         options: function() {
                             return [
-                                [Blockly.Msg.SENGO1_COLOR_BLACK, 'kColorBlack'],
-                                [Blockly.Msg.SENGO1_COLOR_RED, 'kColorRed'],
-                                [Blockly.Msg.SENGO1_COLOR_GREEN, 'kColorGreen'],
-                                [Blockly.Msg.SENGO1_COLOR_YELLOW, 'kColorYellow'],
-                                [Blockly.Msg.SENGO1_COLOR_BLUE, 'kColorBlue'],
-                                [Blockly.Msg.SENGO1_COLOR_PURPLE, 'kColorPurple'],
-                                [Blockly.Msg.SENGO1_COLOR_CYAN, 'kColorCyan'],
-                                [Blockly.Msg.SENGO1_COLOR_WHITE, 'kColorWhite']
+                                [Blockly.Msg.SENGO1_COLOR_BLACK, 'Sengo1::kColorBlack'],
+                                [Blockly.Msg.SENGO1_COLOR_WHITE, 'Sengo1::kColorWhite'],
+                                [Blockly.Msg.SENGO1_COLOR_RED, 'Sengo1::kColorRed'],
+                                [Blockly.Msg.SENGO1_COLOR_GREEN, 'Sengo1::kColorGreen'],
+                                [Blockly.Msg.SENGO1_COLOR_BLUE, 'Sengo1::kColorBlue'],
+                                [Blockly.Msg.SENGO1_COLOR_YELLOW, 'Sengo1::kColorYellow']   
                             ];
                         }
                     }

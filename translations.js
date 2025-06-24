@@ -26,9 +26,9 @@ function registerBlocksMessages(Blockly) {
         "SENGO1_SET_DEFAULT": "Restore default parameters",
         "SENGO1_VISION_SET_STATUS": "Set   Sengo1   %1 algo %2",
         "SENGO1_VISION_SET_PARAM_NUM": "Set   Sengo1   algo %1 parameter groups number %2",
-        "SENGO1_VISION_BLOB_SET_PARAM": "Set   Sengo1   algo Blob Detection min-width %1 min-height %2 color %3",
-        "SENGO1_VISION_COLOR_SET_PARAM": "Set   Sengo1   algo Color Recognition x-coord %1 y-coord %2 width %3 height %4",
-        "SENGO1_VISION_FACE_SET_PARAM": "Set   Sengo1   algo Face Recognition %1 ID %2",
+        "SENGO1_VISION_BLOB_SET_PARAM": "Set   Sengo1   algo Blob min-width %1 min-height %2 color %3",
+        "SENGO1_VISION_COLOR_SET_PARAM": "Set   Sengo1   algo Color x-coord %1 y-coord %2 width %3 height %4",
+        "SENGO1_VISION_FACE_SET_PARAM": "Set   Sengo1   algo Face %1 ID %2",
         "SENGO1_ENABLE": "run",
         "SENGO1_DISABLE": "stop",
         "SENGO1_LED_SET_COLOR": "Set   Sengo1   LEDs' color %1 when targets were detected otherwise %2 luma(1-15) %3",
@@ -41,7 +41,7 @@ function registerBlocksMessages(Blockly) {
         "SENGO1_GET_QRCODEVALUE": "result string",
         "SENGO1_COLOR": "color",
         "SENGO1_VISION_BLOCK": "block",
-        "SENGO1_SAVE_DATA": "save data and",
+        "SENGO1_SAVE_DATA": "save data as",
         "SENGO1_DEL_DATA": "delete data",
         
         // Vision type
